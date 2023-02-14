@@ -1,0 +1,21 @@
+---
+pool: 
+  name: default
+  vmImage: 'ubuntu-latest'
+
+steps:
+- task: UsePythonVersion@0
+  inputs: 
+    versionSpec: '3.x'
+    addToPath: true
+
+- script: |
+    python -m pip install --upgrade pip
+    pip install -r requirements.txt
+  displayName: 'install dependencies' 
+
+- task: BatchScript@1
+  displayName: 'run script make.bat'
+  inputs:
+    filename: make.bat
+    arguments: html   
