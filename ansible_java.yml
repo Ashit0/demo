@@ -1,0 +1,8 @@
+---
+pool:
+  name: default
+  vmImage: ubuntu-20.04
+
+
+steps: 
+  - script: 'ansible-playbook -i D:\joip\azure_devops\hosts D:\joip\azure_devops\javaaz.yml'  

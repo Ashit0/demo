@@ -1,0 +1,14 @@
+---
+pool:
+  name: azurepipelines
+  vmImage: ubuntu latest
+trigger:
+  - master  
+stages:
+- stage: build_mac
+    jobs:
+    - job: buildjob 
+      steps:
+      - script: echo number 1
+      - script: echo number 2
+      - script: echo number 3  

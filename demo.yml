@@ -1,0 +1,10 @@
+---
+pool: 
+  name: default
+  vmImage: ubuntu-latest
+
+steps: 
+- task: bash@3
+  inputs:
+    targettype: 'inline'
+    script: 'printenv'
