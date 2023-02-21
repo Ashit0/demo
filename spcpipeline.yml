@@ -1,0 +1,19 @@
+---
+pool:
+  name: default
+
+
+
+steps:
+- task: maven@3
+  inputs:
+    mavenPOMFile: 'pom.xml'
+    goals: 'package'
+    publishJUnitResults: true
+    testResultsFiles: '**/surefire-reports/TEST-*.xml'
+    javaHomeOption: 'Path'
+    jdkVersionOption: '1.17'
+    jdkDirectory: /usr/lib/jvm/java-17-openjdk-amd64/bin/java
+    mavenVersionOption: 'Path'
+    mavenDirectory: /home/ashit/apache-maven-3.9.0
+
